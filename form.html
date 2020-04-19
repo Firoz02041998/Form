@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title> Form Validation</title>
+        <script type="text/javascript">
+        
+        function validate()
+        {
+
+            var username =document.getElementById("user")
+            var password =document.getElementById("pass")
+            if(username.value.trim()=="") 
+            {
+                alert("Blank values entered")
+                username.style.border="solid 3px red";
+                return false;
+            }
+            else if(password.value.trim()=="")
+            {
+
+                alert("Blank values entered")
+                return false;
+            }
+            else if(password.value.trim().length<5)
+            { 
+               alert("Password too short")
+            return false  
+            }
+            else
+            {
+                return true;
+            }
+
+
+        }
+
+
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate()" action="message.html">
+            <input id='user' placeholder="Username" type="text"/>
+            <br>
+            <br>
+            <input id='pass' placeholder="Password" type="password"/>
+            <br>
+            <br>
+            <button type="submit"> Submit </button>
+        </form>
+    </body>
+</html>>
